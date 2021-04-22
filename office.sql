@@ -21,32 +21,52 @@ VALUES ("Sales");
 INSERT INTO department (title)
 VALUES ("Reception");
 
-CREATE TABLE IF NOT EXISTS role (
-	id INT AUTO_INCREMENT NOT NULL,
-	job_title VARCHAR(30) NOT NULL,
-    salary INT (50) NOT NULL,
-	department_id INT,
-	PRIMARY KEY(id),
-	FOREIGN KEY(department_id) REFERENCES department(id),
-    
-);
+-- CREATE TABLE `role` (
+--   id INT NOT NULL AUTO_INCREMENT,
+--   job_title VARCHAR(30) NULL,
+--   salary INT, 
+--   PRIMARY KEY (id)
+-- );
 
-INSERT INTO department (name) VALUES ("HR"), ("Accounting"), ("Sales");
-INSERT INTO
-	role (job_title, salary, house_id)
-VALUES
-	("HR lead", 60,000 , 1),
-    ("Accounting Lead", 70,000 , 2),
-    ("Sales lead", 50,000, 3);
-SELECT * FROM department;
-SELECT * FROM role;
-SELECT
-	CONCAT(w.job_title, ' ', salary) AS role,
-    d.name AS department,
+-- INSERT INTO `role` (job_title,salary)
+-- VALUES ("HR lead", 20,000);
+
+-- INSERT INTO department (job_title,salary)
+-- VALUES ("Accounting lead", 30,000);
+
+-- INSERT INTO department (job_title,salary)
+-- VALUES ("Sales lead",40,000);
+
+-- INSERT INTO department (job_title,salary)
+-- VALUES ("Manager",60,000);
+
+
+-- CREATE TABLE IF NOT EXISTS role (
+-- 	id INT AUTO_INCREMENT NOT NULL,
+-- 	job_title VARCHAR(30) NOT NULL,
+--     salary INT (50) NOT NULL,
+-- 	department_id INT,
+-- 	PRIMARY KEY(id),
+-- 	FOREIGN KEY(department_id) REFERENCES department(id),
+    
+-- );
+
+-- INSERT INTO department (name) VALUES ("HR"), ("Accounting"), ("Sales");
+-- INSERT INTO
+-- 	role (job_title, salary, house_id)
+-- VALUES
+-- 	("HR lead", 60,000 , 1),
+--     ("Accounting Lead", 70,000 , 2),
+--     ("Sales lead", 50,000, 3);
+-- SELECT * FROM department;
+-- SELECT * FROM role;
+-- SELECT
+-- 	CONCAT(w.job_title, ' ', salary) AS role,
+--     d.name AS department,
    
-FROM department AS d
-INNER JOIN role AS r
-on d.id = r.department_id;
+-- FROM department AS d
+-- INNER JOIN role AS r
+-- on d.id = r.department_id;
     
 
 
